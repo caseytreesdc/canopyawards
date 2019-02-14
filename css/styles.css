@@ -23,7 +23,7 @@
   }
 
   h4 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 600;
     padding-top: 20px;
     color: #231f20;
@@ -213,6 +213,12 @@ p.callout-text {
     100% {color: #dee122;}
   }
 
+  figure.rootstorivers {
+      margin: 1em auto;
+      max-width: 900px;
+      text-align: center;
+  }
+
 header video {
     position: absolute;
     top: 50%;
@@ -235,26 +241,8 @@ header .container {
     height: 85vh;
 }
 
-/*header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.5;
-    z-index: 1;
-}*/
-
-
- 
-
   header.clearfix.index {
       height: 100vh;
-      /*background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .7)), url(../images/aerial-dc.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;*/
       margin-bottom: 20px;
   }
 
@@ -281,7 +269,7 @@ header .container {
 
   header.clearfix h1 {
       color: #fff;
-      animation: colorchangetet 30s infinite; /* animation-name followed by duration in seconds*/
+      animation: colorchangetext 30s infinite; /* animation-name followed by duration in seconds*/
     /* you could also use milliseconds (ms) or something like 2.5s */
  -webkit-animation: colorchangetext 30s infinite; /* Chrome and Safari */
       text-align: center;
@@ -398,6 +386,25 @@ header .container {
       border-radius: 0 65px;
   }
 
+  .action-content.sponsor {
+    border-radius: 5px;
+    background-color: #fff;
+    border: solid 1px rgba(0,0,0,.1);
+    padding: 2.4em 0;
+  }
+
+  .action-content.sponsor .action-description {
+      text-align: center;
+  }
+
+  .action-content.sponsor img {
+    width: 100px;
+}
+
+.action-content.sponsor:hover {
+    cursor: pointer;
+}
+
   .action-label {
       background: #333;
       padding: 12px 30px;
@@ -423,11 +430,19 @@ header .container {
       padding: 0 1em;
   }
 
-  .action-description p {
+  .action-description p 
       font-size: 1em;
       font-weight: 400;
       /*letter-spacing: 1px;*/
   }
+
+  .modal-header {margin-left: 1.5em;}
+  .modal-content h5 {font-family: 'lato'; font-weight:700; color: #231f20; margin-left: 1em;}
+  .modal-body ul li {font-family: lato; font-weight: 600; font-size: .95em; color: rgba(0,0,0,.5); padding: 3px;}
+
+  .btn-secondary {background-color:#dee122 !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600;}
+  .btn-primary {background-color:#2f459b !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600}
+  .btn-secondary:not([disabled]):not(.disabled):active {background-color:#e04484!important;}
 
   .action-label.one {animation: MoveUpDownR 2.3s .1s ease infinite; background-color:#60b8d3;}
         .action-label.two {animation: MoveUpDownR 2.3s .4s ease infinite; background-color:#74c1d8;}
@@ -483,13 +498,11 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}
             }
 
 
-
-
-
   /*-- MAX-WIDTH MEDIA QUERIES --*/
 
   @media screen and (max-width: 1200px) {
       .action-description {padding: 2em 1em;}
+      header.clearfix h1.rootstorivers {font-size: 6em;}
   }
 
   @media only screen and (max-width: 990px) {
@@ -499,9 +512,16 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}
     header.clearfix h1.project-title {
         padding-top: 0;
     }
-    .aw {
-        padding: 0;
+    header.clearfix h2.subtitle {
+        font-size: 1.2em;
+        text-align: center;
     }
+    
+}
+
+@media screen and (max-width: 992px) {
+    header.clearfix h1.rootstorivers {font-size:5em;}
+    .container {max-width: 800px;}
 }
 
   @media screen and (max-width: 768px) {
@@ -525,14 +545,16 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}
   }
 
   @media screen and (max-width: 568px) {
+
+      header.clearfix {background-position: center;}
       header.clearfix.development .container.content {
           padding-top: 3vh;
       }
       header.clearfix p {
           font-size: 1.3em;
       }
-      header.clearfix h1 {
-          font-size: 2.8em;
+      header.clearfix h1.rootstorivers{
+          font-size: 5em;
       }
       header.clearfix h1.project-title {font-size: 2em; }
 
@@ -546,23 +568,44 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}
       }
   }
 
+  @media screen and (max-width: 411px) {
+      header.clearfix h2.subtitle {font-size: 1.1em;}
+      header.clearfix h1.rootstorivers{font-size: 3.99em;}
+  }
+
   @media screen and (max-width:375px) {
       .action-description {
           padding: 0 1.5em;
       }
       .action-label {font-size:.8em;}
-      .title-crdc {
+      /*.title-crdc {
         font-size: .4em !important;
+    }*/
+
+    header.clearfix h1.rootstorivers{
+        font-size: 3.5em;
+        text-align: left;
+    }
+
+    header.clearfix h2.subtitle {
+        font-size: .99em;
+        text-align: left;
     }
   }
 
-  /*-- MIN-WIDTH MEDIA QUERIES --*/
+  @media screen and (max-width: 320px) {
 
-  @media only screen and (min-width:990px) {
-    .aw {
-        padding: 3em 1em 2em;
+    header.clearfix h1.rootstorivers{
+        font-size: 2.8em;
     }
-}
+
+    header.clearfix h2.subtitle {
+        font-size: .7em;
+    }
+
+  }
+
+
 
 
 
