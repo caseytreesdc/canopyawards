@@ -439,8 +439,11 @@ header .container {
   .modal-header {margin-left: 1.5em;}
   .modal-content h5 {font-family: 'lato'; font-weight:700; color: #231f20; margin-left: 1em;}
   .modal-body ul li {font-family: lato; font-weight: 600; font-size: .95em; color: rgba(0,0,0,.5); padding: 3px;}
+  .modal-body p {font-family: lato; font-weight: 600; font-size: .95em; color:#231f20; padding: 3px 3px 0px 23px;}
 
   .btn-secondary {background-color:#dee122 !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600;}
+  button.btn.btn-secondary.color-change.waves-effect.waves-light {animation: colorchange 30s infinite; /* animation-name followed by duration in seconds*/
+ -webkit-animation: colorchange 30s infinite; /* Chrome and Safari */}
   .btn-primary {background-color:#2f459b !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600}
   .btn-secondary:not([disabled]):not(.disabled):active {background-color:#e04484!important;}
 
@@ -449,6 +452,8 @@ header .container {
         .action-label.three {animation: MoveUpDownR 2.3s .8s ease infinite; background-color:#88cade;}
         .action-label.four {animation: MoveUpDownR 2.3s 1.2s ease infinite; background-color:#9cd3e4;}
         header.clearfix h1 { font-weight: 800;}
+
+    .card {box-shadow: none; webkit-box-shadow: none;}
 
 
         @keyframes MoveUpDownR {
