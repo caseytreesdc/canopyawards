@@ -62,11 +62,11 @@
 
 
 a {
-    color: #049948;
+    color: #7c93ca;
 }
 
 a:hover {
-    color: #99ca3c;
+    color: #dee122;
 }
 
 .bg-light {
@@ -147,7 +147,7 @@ height: 10vw;
 }
 
 .background {
-    background-image: linear-gradient(rgba(136, 202, 222, .4), rgba(0, 0, 0, .7)), url('../images/city-center.jpg');
+    background-image: linear-gradient(rgba(136, 202, 222, .4), rgba(0, 0, 0, .7)), url('../images/IMG_1410.jpg');
     background-size: cover;
     background-attachment: fixed;
     padding: 8vh 0 20vh;
@@ -171,13 +171,12 @@ p.callout-text {
 }
 
   header.clearfix {
-    background-color: #000;
-    background-image: url('../images/ginkgo-1.svg'), url('../images/ginkgo-2.svg');
-    background-position: -2% 131%, 104% -53%;
-    background-size: 20%, 20%;
+    background-image: url(../images/roots.svg);
+    background-size: cover;
     background-repeat: no-repeat;
-    /*animation: colorchange 30s infinite;
- -webkit-animation: colorchange 30s infinite;*/
+    animation: colorchange 30s infinite; /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+ -webkit-animation: colorchange 30s infinite; /* Chrome and Safari */
     position: relative;
     height: 85vh;
     min-height: 25rem;
@@ -401,9 +400,9 @@ header .container {
     width: 100px;
 }
 
-/*.action-content.sponsor:hover {
+.action-content.sponsor:hover {
     cursor: pointer;
-}*/
+}
 
   .action-label {
       background: #333;
@@ -438,17 +437,14 @@ header .container {
 
   .modal-header {margin-left: 1.5em;}
   .modal-content h5 {font-family: 'lato'; font-weight:700; color: #231f20; margin-left: 1em;}
-  .modal-body {padding: 2rem;}
-  .modal-body h6 {font-weight: 600;}
   .modal-body ul li {font-family: lato; font-weight: 600; font-size: .95em; color: rgba(0,0,0,.5); padding: 3px;}
-  .modal-body p{font-family: lato; font-weight: 400; font-size: .95em; color:#231f20; padding: 3px 3px 0px 3px;}
+  .modal-body p {font-family: lato; font-weight: 600; font-size: .95em; color:#231f20; padding: 3px 3px 0px 23px;}
 
-  .btn-secondary {background-color:#049948 !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600;}
-  button.btn.btn-secondary.color-change.waves-effect.waves-light {background-color: #049948;}
-  .btn-primary {background-color:#99ca3c !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600}
-  
-  .btn-secondary:not([disabled]):not(.disabled):active {background-color:#000!important;}
-  .btn-primary:not([disabled]):not(.disabled):active {background-color:#000!important;}
+  .btn-secondary {background-color:#dee122 !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600;}
+  button.btn.btn-secondary.color-change.waves-effect.waves-light {animation: colorchange 30s infinite; /* animation-name followed by duration in seconds*/
+ -webkit-animation: colorchange 30s infinite; /* Chrome and Safari */}
+  .btn-primary {background-color:#2f459b !important; box-shadow:none; webkit-box-shadow:none; font-family:lato; font-weight: 600}
+  .btn-secondary:not([disabled]):not(.disabled):active {background-color:#e04484!important;}
 
   .action-label.one {animation: MoveUpDownR 2.3s .1s ease infinite; background-color:#60b8d3;}
         .action-label.two {animation: MoveUpDownR 2.3s .4s ease infinite; background-color:#74c1d8;}
@@ -474,7 +470,7 @@ header .container {
 
   footer {
       height: 4em;
-      background-color: #000000;
+      background-color: #2f459b;
       margin-top: 0;
       padding: 20px;
   }
@@ -488,9 +484,9 @@ header .container {
 
 
 figure.water {margin: 0 0 -1em 0;}
-/*figure.water path#Dark {animation: MoveUpDownW 2.3s .1s ease infinite;}
+figure.water path#Dark {animation: MoveUpDownW 2.3s .1s ease infinite;}
 figure.water path#Medium {animation: MoveUpDownW 2.3s .4s ease infinite;}
-figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}*/
+figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}
 
  @keyframes MoveUpDownW {
                 0% {
@@ -514,7 +510,6 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}*/
   }
 
   @media only screen and (max-width: 990px) {
-    header.clearfix {background-size: 285px, 285px;}
     header.clearfix .container-fluid {
         text-align: center;
     }
@@ -528,13 +523,13 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}*/
     
 }
 
-/*@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     header.clearfix h1.rootstorivers {font-size:5em;}
     .container {max-width: 800px;}
-}*/
+}
 
   @media screen and (max-width: 768px) {
-    header.clearfix {background-size: 245px, 270px;}
+    
       header.clearfix.development .container.content {
           padding-top: 5vh;
       }
@@ -555,7 +550,7 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}*/
 
   @media screen and (max-width: 568px) {
 
-      header.clearfix {background-size: 220px, 245px;}
+      header.clearfix {background-position: center;}
       header.clearfix.development .container.content {
           padding-top: 3vh;
       }
@@ -578,13 +573,11 @@ figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}*/
   }
 
   @media screen and (max-width: 411px) {
-    
       header.clearfix h2.subtitle {font-size: 1.1em;}
       header.clearfix h1.rootstorivers{font-size: 3.99em;}
   }
 
   @media screen and (max-width:375px) {
-    header.clearfix {background-size: 185px, 200px;}
       .action-description {
           padding: 0 1.5em;
       }
